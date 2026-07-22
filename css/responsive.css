@@ -1,0 +1,267 @@
+@media(max-width:768px){
+    .nav-menu{
+        display:none;
+    }
+}
+
+/* HERO */
+
+@media (max-width:768px){
+    .hero-content{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+}
+
+/* ===========================
+        STATISTICS
+=========================== */
+
+@media(max-width:992px){
+    .statistics-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .statistics-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* ===========================
+            ABOUT
+=========================== */
+
+@media(max-width:992px){
+    .about-content{
+        flex-direction:column;
+    }
+
+    .about-text{
+        text-align:center;
+    }
+
+    .about-list{
+        grid-template-columns:1fr;
+    }
+}
+
+/* ===========================
+        PROGRAMS
+=========================== */
+
+@media(max-width:992px){
+    .program-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+    .program-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* ===========================
+        SCHEDULE
+=========================== */
+
+@media(max-width:768px){
+    .schedule-card{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .schedule-day{
+        min-width:100%;
+    }
+}
+
+/* ===========================
+        TEACHERS
+=========================== */
+
+@media(max-width:992px){
+
+    .teachers-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .teachers-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ===========================
+        GALLERY
+=========================== */
+
+@media(max-width:992px){
+
+    .gallery-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ===========================
+        TESTIMONIALS
+=========================== */
+
+@media(max-width:992px){
+
+    .testimonial-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .testimonial-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ===========================
+        DONATION
+=========================== */
+
+@media(max-width:992px){
+
+    .donation-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ===========================
+        CONTACT
+=========================== */
+
+@media(max-width:992px){
+
+    .contact-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ===========================
+            FOOTER
+=========================== */
+
+@media(max-width:992px){
+
+    .footer-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+}
+
+/*=========================
+        MOBILE MENU
+==========================*/
+
+@media(max-width:992px){
+
+    .hamburger{
+
+        display:block;
+
+    }
+
+    .nav-menu{
+
+        position:fixed;
+
+        top:80px;
+
+        right:-100%;
+
+        width:300px;
+
+        height:calc(100vh - 80px);
+
+        background:#fff;
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:flex-start;
+
+        align-items:flex-start;
+
+        padding:40px;
+
+        gap:30px;
+
+        transition:.4s;
+
+        box-shadow:-5px 0 30px rgba(0,0,0,.1);
+
+    }
+
+    .nav-menu.active{
+
+        right:0;
+
+    }
+
+}
