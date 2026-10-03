@@ -7,6 +7,11 @@ import { Schedule } from "./sections/schedule.js";
 import { Teachers } from "./sections/teachers.js";
 import { Gallery } from "./sections/gallery.js";
 import { Testimonials } from "./sections/testimonials.js";
+import { Operational } from "./sections/operational.js";
+import { Waqf } from "./sections/waqf.js";
+import { Pondok } from "./sections/pondok.js";
+import { PHBI } from "./sections/phbi.js";
+import { Financial } from "./sections/financial.js";
 import { FAQ } from "./sections/faq.js";
 import { Donation } from "./sections/donation.js";
 import { Contact } from "./sections/contact.js";
@@ -25,6 +30,11 @@ app.innerHTML = `
     ${Statistics()}
     ${About()}    
     ${Programs()}
+    ${Operational()}
+    ${Waqf()}
+    ${Pondok()}
+    ${PHBI()}
+    ${Financial()}
     ${Schedule()}
     ${Teachers()}
     ${Gallery()}
