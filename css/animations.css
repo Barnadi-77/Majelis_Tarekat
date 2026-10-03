@@ -1,131 +1,130 @@
 /* ========================================
-            GLOBAL TRANSITION
+   GLOBAL
 ======================================== */
 
-*{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
+
 /* ========================================
-            FADE UP
+   REVEAL BASE
 ======================================== */
 
-.fade-up{
-
-    opacity:0;
-
-    transform:translateY(60px);
+.fade-up,
+.fade-left,
+.fade-right,
+.zoom {
+    opacity: 0;
 
     transition:
-        opacity .8s ease,
-        transform .8s ease;
+        opacity 0.8s ease,
+        transform 0.8s ease;
 
+    will-change: opacity, transform;
 }
 
-.fade-up.show{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
 
 /* ========================================
-            FADE LEFT
+   SCROLL DOWN
 ======================================== */
 
-.fade-left{
-
-    opacity:0;
-
-    transform:translateX(-60px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-
+.fade-up {
+    transform: translateY(70px);
 }
 
-.fade-left.show{
-
-    opacity:1;
-
-    transform:translateX(0);
-
+.fade-left {
+    transform: translateX(-70px);
 }
+
+.fade-right {
+    transform: translateX(70px);
+}
+
+.zoom {
+    transform: scale(0.85);
+}
+
 
 /* ========================================
-            FADE RIGHT
+   SCROLL UP
 ======================================== */
 
-.fade-right{
-
-    opacity:0;
-
-    transform:translateX(60px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-
+.fade-up.from-top {
+    transform: translateY(-70px);
 }
 
-.fade-right.show{
-
-    opacity:1;
-
-    transform:translateX(0);
-
+.fade-left.from-top {
+    transform: translateX(70px);
 }
+
+.fade-right.from-top {
+    transform: translateX(-70px);
+}
+
+.zoom.from-top {
+    transform: scale(1.15);
+}
+
 
 /* ========================================
-            ZOOM
+   SHOW
 ======================================== */
 
-.zoom{
-
-    opacity:0;
-
-    transform:scale(.85);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-
+.fade-up.show,
+.fade-left.show,
+.fade-right.show,
+.zoom.show {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
 }
 
-.zoom.show{
-
-    opacity:1;
-
-    transform:scale(1);
-
-}
 
 /* ========================================
-            BUTTON
+   PAGE LOAD
+======================================== */
+
+.page-load {
+    animation: pageLoad 1s ease forwards;
+}
+
+@keyframes pageLoad {
+
+    from {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ========================================
+   BUTTON
 ======================================== */
 
 .btn-primary,
 .btn-secondary,
-.btn-donasi{
-
-    transition:.35s ease;
-
+.btn-donasi {
+    transition: 0.35s ease;
 }
 
 .btn-primary:hover,
 .btn-secondary:hover,
-.btn-donasi:hover{
+.btn-donasi:hover {
+    transform: translateY(-4px);
 
-    transform:translateY(-4px);
-
-    box-shadow:0 12px 25px rgba(0,0,0,.15);
-
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
+
 /* ========================================
-            CARD
+   CARD
 ======================================== */
 
 .program-card,
@@ -135,12 +134,10 @@
 .gallery-item,
 .schedule-card,
 .contact-card,
-.faq-item{
-
+.faq-item {
     transition:
-        transform .35s ease,
-        box-shadow .35s ease;
-
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 .program-card:hover,
@@ -150,63 +147,51 @@
 .gallery-item:hover,
 .schedule-card:hover,
 .contact-card:hover,
-.faq-item:hover{
-
-    transform:translateY(-10px);
+.faq-item:hover {
+    transform: translateY(-10px);
 
     box-shadow:
-        0 18px 45px rgba(0,0,0,.12);
-
+        0 18px 45px rgba(0, 0, 0, 0.12);
 }
+
 
 /* ========================================
-            IMAGE
+   IMAGE
 ======================================== */
 
-img{
-
-    transition:.4s ease;
-
+img {
+    transition: 0.4s ease;
 }
 
-.gallery-item:hover img{
-
-    transform:scale(1.08);
-
+.gallery-item:hover img {
+    transform: scale(1.08);
 }
+
 
 /* ========================================
-            NAV LINK
+   NAV LINK
 ======================================== */
 
-.nav-menu a{
-
-    position:relative;
-
+.nav-menu a {
+    position: relative;
 }
 
-.nav-menu a::after{
+.nav-menu a::after {
+    content: "";
 
-    content:"";
+    position: absolute;
 
-    position:absolute;
+    left: 0;
+    bottom: -8px;
 
-    left:0;
+    width: 0;
+    height: 2px;
 
-    bottom:-8px;
+    background: var(--secondary);
 
-    width:0;
-
-    height:2px;
-
-    background:var(--secondary);
-
-    transition:.3s;
-
+    transition: 0.3s;
 }
 
-.nav-menu a:hover::after{
-
-    width:100%;
-
+.nav-menu a:hover::after {
+    width: 100%;
 }
