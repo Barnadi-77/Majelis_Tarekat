@@ -33,18 +33,7 @@ export function Navbar() {
                 </nav>
 
 
-                <!-- DESKTOP ACTION -->
-                <div class="navbar-actions">
 
-                    <a href="#donasi" class="btn-donasi">
-                        Donasi
-                    </a>
-
-                    <a href="admin.html" class="btn-admin">
-                        Admin
-                    </a>
-
-                </div>
 
 
                 <!-- HAMBURGER -->
