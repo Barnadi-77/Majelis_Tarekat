@@ -220,31 +220,37 @@
 
 @media (max-width: 992px) {
 
-    /* HAMBURGER */
-
     .hamburger {
         display: block;
         flex-shrink: 0;
+        position: relative;
+        z-index: 1001;
     }
 
 
-    /* DESKTOP ACTION DISEMBUNYIKAN */
+    /* =====================
+        DESKTOP ACTION
+    ===================== */
 
     .navbar-actions {
         display: none;
     }
 
 
-    /* MOBILE MENU */
+    /* =====================
+        MOBILE MENU
+    ===================== */
 
     .nav-menu {
         position: fixed;
 
-        top: 80px;
-        right: -100%;
+        top: 0;
+        right: 0;
 
         width: 300px;
-        height: calc(100vh - 80px);
+        max-width: 85vw;
+
+        height: 100vh;
 
         background: var(--white);
 
@@ -254,48 +260,62 @@
         justify-content: flex-start;
         align-items: flex-start;
 
-        padding: 40px;
+        padding: 100px 30px 40px;
 
         gap: 0;
 
-        transition: .4s ease;
+        box-sizing: border-box;
 
-        box-shadow: -5px 0 30px rgba(0, 0, 0, .1);
+        transform: translateX(100%);
+
+        transition: transform .4s ease;
+
+        box-shadow: -5px 0 30px rgba(0, 0, 0, .12);
 
         overflow-y: auto;
+        overflow-x: hidden;
+
+        z-index: 1000;
     }
 
 
-    /* MENU ACTIVE */
+    /* =====================
+        MENU ACTIVE
+    ===================== */
 
     .nav-menu.active {
-        right: 0;
+        transform: translateX(0);
     }
 
 
-    /* MENU LINK */
+    /* =====================
+        MENU LINK
+    ===================== */
 
-    .nav-menu a {
+    .nav-menu > a {
         width: 100%;
 
+        box-sizing: border-box;
+
         padding: 15px 0;
+
+        color: var(--dark);
 
         border-bottom: 1px solid rgba(0, 0, 0, .06);
     }
 
 
-    /* DONASI DI MOBILE */
-
-    /* =========================
-        DONASI MOBILE
-========================= */
+    /* =====================
+        DONASI
+    ===================== */
 
     .nav-menu .mobile-donasi {
         display: flex;
 
         width: 100%;
 
-        margin-top: 20px;
+        margin-top: 25px;
+
         padding: 13px 20px;
 
         justify-content: center;
@@ -304,28 +324,18 @@
         background: var(--primary);
         color: var(--white);
 
-        border-radius: 50px;
         border: none;
+        border-radius: 50px;
 
         font-weight: 600;
 
         text-decoration: none;
-
-        transition: var(--transition);
     }
 
 
-    /* Donasi Hover */
-
-    .nav-menu .mobile-donasi:hover {
-        background: var(--primary-dark);
-        color: var(--white);
-    }
-
-
-    /* =========================
-        ADMIN MOBILE
-========================= */
+    /* =====================
+        ADMIN
+    ===================== */
 
     .nav-menu .mobile-admin {
         display: flex;
@@ -333,6 +343,7 @@
         width: 100%;
 
         margin-top: 12px;
+
         padding: 13px 20px;
 
         justify-content: center;
@@ -341,24 +352,24 @@
         background: var(--primary);
         color: var(--white);
 
-        border-radius: 50px;
         border: none;
+        border-radius: 50px;
 
         font-weight: 600;
 
         text-decoration: none;
-
-        transition: var(--transition);
     }
 
 
-    /* Admin Hover */
+    /* =====================
+        HOVER
+    ===================== */
 
+    .nav-menu .mobile-donasi:hover,
     .nav-menu .mobile-admin:hover {
         background: var(--primary-dark);
         color: var(--white);
     }
-
 }
 
 /* ==================================================
