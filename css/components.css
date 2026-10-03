@@ -1,216 +1,171 @@
-/* =========================
-        NAVBAR
-========================= */
+/* ===========================
 
-.navbar {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+*        NAVBAR*
 
-    background: var(--white);
-    box-shadow: var(--shadow);
+=========================== */
+
+.navbar{
+
+    width:100%;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    background:var(--white);
+
+    box-shadow:var(--shadow);
+
 }
 
+.navbar .container{
 
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display:flex;
 
-    height: 80px;
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:80px;
+
 }
 
+.logo{
 
-/* =========================
-        LOGO
-========================= */
+    font-size:28px;
 
-.logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--primary);
+    font-weight:bold;
 
-    white-space: nowrap;
+    color:var(--primary);
+
 }
 
+.nav-menu{
 
-/* =========================
-        NAV MENU
-========================= */
+    display:flex;
 
-.nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 35px;
+    gap:35px;
+
 }
 
+.nav-menu a{
 
-.nav-menu a {
-    color: var(--dark);
-    font-weight: 500;
+    color:var(--dark);
 
-    transition: var(--transition);
+    font-weight:500;
+
+    transition:var(--transition);
+
 }
 
+.nav-menu a:hover{
 
-.nav-menu a:hover {
-    color: var(--primary);
+    color:var(--primary);
+
 }
 
+.btn-donasi{
 
-/* =========================
-        NAVBAR ACTIONS
-========================= */
+    background:var(--primary);
 
-.navbar-actions {
-    display: flex;
-    align-items: center;
+    color:white;
 
-    gap: 18px;
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    transition:var(--transition);
+
 }
 
+.btn-donasi:hover{
 
-/* =========================
-        DONASI
-========================= */
+    background:var(--primary-dark);
 
-.btn-donasi {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    background: var(--primary);
-    color: var(--white);
-
-    padding: 12px 22px;
-
-    border-radius: 50px;
-
-    font-weight: 600;
-
-    transition: var(--transition);
 }
 
+/*=========================
 
-.btn-donasi:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
+*        HAMBURGER*
+
+==========================*/
+
+.hamburger{
+
+    display:none;
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    position:relative;
+
 }
 
+.hamburger span{
 
-/* =========================
-        ADMIN
-========================= */
+    position:absolute;
 
-.btn-admin {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    left:8px;
 
-    padding: 11px 20px;
+    width:28px;
 
-    border: 1px solid var(--primary);
-    border-radius: 50px;
+    height:3px;
 
-    color: var(--primary);
+    background:var(--primary);
 
-    font-size: 14px;
-    font-weight: 600;
+    transition:.35s;
 
-    transition: var(--transition);
 }
 
+.hamburger span:nth-child(1){
 
-.btn-admin:hover {
-    background: var(--primary);
-    color: var(--white);
+    top:12px;
 
-    transform: translateY(-2px);
 }
 
+.hamburger span:nth-child(2){
 
-/* =========================
-        MOBILE DONASI
-========================= */
+    top:21px;
 
-.mobile-donasi {
-    display: none;
 }
 
-.mobile-admin {
-    display: none;
+.hamburger span:nth-child(3){
+
+    top:30px;
+
 }
 
+/* ACTIVE */
 
-/* =========================
-        HAMBURGER
-========================= */
+.hamburger.active span:nth-child(1){
 
-.hamburger {
-    display: none;
+    transform:rotate(45deg);
 
-    width: 45px;
-    height: 45px;
+    top:21px;
 
-    border: none;
-    background: none;
-
-    cursor: pointer;
-
-    position: relative;
 }
 
+.hamburger.active span:nth-child(2){
 
-.hamburger span {
-    position: absolute;
+    opacity:0;
 
-    left: 8px;
-
-    width: 28px;
-    height: 3px;
-
-    background: var(--primary);
-
-    border-radius: 5px;
-
-    transition: .35s;
 }
 
+.hamburger.active span:nth-child(3){
 
-.hamburger span:nth-child(1) {
-    top: 12px;
-}
+    transform:rotate(-45deg);
 
+    top:21px;
 
-.hamburger span:nth-child(2) {
-    top: 21px;
-}
-
-
-.hamburger span:nth-child(3) {
-    top: 30px;
-}
-
-
-/* =========================
-        HAMBURGER ACTIVE
-========================= */
-
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 21px;
-}
-
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 21px;
 }
 
 /* ===========================
