@@ -1,3 +1,10 @@
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 /* ===========================
 
 *        NAVBAR*
@@ -34,7 +41,7 @@
 
 .logo{
 
-    font-size:28px;
+    font-size:25px;
 
     font-weight:bold;
 
@@ -1630,9 +1637,15 @@
 ================================================== */
 
 .phbi {
-    padding: 100px 0;
+    width: 100%;
+    min-height: 100vh;
+}
 
-    background: var(--bg-secondary);
+.phbi .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 
