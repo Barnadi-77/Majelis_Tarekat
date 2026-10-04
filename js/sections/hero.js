@@ -8,7 +8,7 @@ export function Hero() {
                 <div class="hero-text">
 
                     <span class="hero-subtitle">
-                        ✨ Selamat Datang di Majelis
+                        Selamat Datang di Majelis
                     </span>
 
                     <h1>
@@ -26,11 +26,11 @@ export function Hero() {
 
                     <div class="hero-buttons">
 
-                        <a href="#" class="btn-primary">
+                        <a href="#jadwal" class="btn-primary">
                             Lihat Jadwal
                         </a>
 
-                        <a href="#" class="btn-secondary">
+                        <a href="#tentang" class="btn-secondary">
                             Tentang Kami
                         </a>
 

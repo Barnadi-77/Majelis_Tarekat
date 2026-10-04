@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Majelis</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="admin/cssad/admin.css">
+    <link rel="stylesheet" href="admin/cssad/responsive.css">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         LOGIN PAGE
+    ================================================== -->
+
+    <section class="login-page" id="loginPage">
+
+        <div class="login-card">
+
+            <div class="login-logo">
+                <div class="logo-icon">
+                    <span>☪</span>
+                </div>
+
+                <h1>Admin Majelis</h1>
+
+                <p>
+                    Silakan masuk untuk mengelola
+                    data majelis.
+                </p>
+            </div>
+
+
+            <form id="loginForm">
+
+                <div class="form-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <div class="input-box">
+
+                        <span class="input-icon">
+                            👤
+                        </span>
+
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Masukkan username"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-box">
+
+                        <span class="input-icon">
+                            🔒
+                        </span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Masukkan password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="passwordToggle"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <p
+                    class="login-error"
+                    id="loginError"
+                ></p>
+
+
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+                    <span>Masuk ke Dashboard</span>
+                </button>
+
+            </form>
+
+
+            <a
+                href="index.html"
+                class="back-home"
+            >
+                ← Kembali ke Website
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         ADMIN DASHBOARD
+    ================================================== -->
+
+    <section
+        class="admin-layout"
+        id="adminDashboard"
+        hidden
+    >
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="admin-sidebar" id="adminSidebar">
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-logo">
+                    ☪
+                </div>
+
+                <div>
+                    <h2>Majelis</h2>
+                    <span>Admin Panel</span>
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <button
+                    class="nav-item active"
+                    data-page="dashboard"
+                >
+                    <span>▣</span>
+                    <span>Dashboard</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="pemasukan"
+                >
+                    <span>↗</span>
+                    <span>Pemasukan</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="pengeluaran"
+                >
+                    <span>↘</span>
+                    <span>Pengeluaran</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="laporan"
+                >
+                    <span>▤</span>
+                    <span>Laporan</span>
+                </button>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <a
+                    href="index.html"
+                    class="sidebar-home"
+                >
+                    <span>⌂</span>
+                    Website Utama
+                </a>
+
+
+                <button
+                    class="logout-button"
+                    id="logoutButton"
+                >
+                    <span>↪</span>
+                    Keluar
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="admin-main">
+
+            <!-- TOPBAR -->
+
+            <header class="admin-topbar">
+
+                <button
+                    class="sidebar-toggle"
+                    id="sidebarToggle"
+                >
+                    ☰
+                </button>
+
+
+                <div class="topbar-title">
+
+                    <h1 id="pageTitle">
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Selamat datang kembali, Admin
+                    </p>
+
+                </div>
+
+
+                <div class="admin-profile">
+
+                    <div class="profile-avatar">
+                        A
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>Administrator</strong>
+
+                        <span>Admin</span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- CONTENT -->
+
+            <div class="admin-content">
+
+
+                <!-- ================= DASHBOARD ================= -->
+
+                <div
+                    class="admin-page active"
+                    id="page-dashboard"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <h2>Ringkasan Keuangan</h2>
+
+                            <p>
+                                Pantau kondisi keuangan
+                                majelis secara keseluruhan.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- STAT CARDS -->
+
+                    <div class="stats-grid">
+
+                        <div class="stat-card income">
+
+                            <div class="stat-icon">
+                                ↗
+                            </div>
+
+                            <div>
+                                <span>Total Pemasukan</span>
+
+                                <h3 id="totalPemasukan">
+                                    Rp0
+                                </h3>
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-card expense">
+
+                            <div class="stat-icon">
+                                ↘
+                            </div>
+
+                            <div>
+                                <span>Total Pengeluaran</span>
+
+                                <h3 id="totalPengeluaran">
+                                    Rp0
+                                </h3>
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-card balance">
+
+                            <div class="stat-icon">
+                                Rp
+                            </div>
+
+                            <div>
+                                <span>Saldo</span>
+
+                                <h3 id="totalSaldo">
+                                    Rp0
+                                </h3>
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat-card transaction">
+
+                            <div class="stat-icon">
+                                #
+                            </div>
+
+                            <div>
+                                <span>Total Transaksi</span>
+
+                                <h3 id="totalTransaksi">
+                                    0
+                                </h3>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TRANSAKSI TERBARU -->
+
+                    <div class="content-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h3>
+                                    Transaksi Terbaru
+                                </h3>
+
+                                <p>
+                                    Data pemasukan dan
+                                    pengeluaran terbaru.
+                                </p>
+                            </div>
+
+                            <button
+                                class="view-all-button"
+                                data-page="laporan"
+                            >
+                                Lihat Semua
+                            </button>
+
+                        </div>
+
+
+                        <div class="table-wrapper">
+
+                            <table>
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Tanggal</th>
+                                        <th>Keterangan</th>
+                                        <th>Detail</th>
+                                        <th>Kategori</th>
+                                        <th>Jenis</th>
+                                        <th>Nominal</th>
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody id="recentTransactions">
+
+                                    <tr>
+
+                                        <td
+                                            colspan="6"
+                                            class="empty-data"
+                                        >
+                                            Belum ada transaksi.
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= PEMASUKAN ================= -->
+
+                <div
+                    class="admin-page"
+                    id="page-pemasukan"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <h2>Data Pemasukan</h2>
+
+                            <p>
+                                Kelola seluruh pemasukan
+                                majelis.
+                            </p>
+                        </div>
+
+                        <button class="primary-button">
+                            + Tambah Pemasukan
+                        </button>
+
+                    </div>
+
+
+                    <div class="content-card">
+
+                        <div class="table-wrapper">
+
+                            <table>
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Tanggal</th>
+                                        <th>Keterangan</th>
+                                        <th>Detail</th>
+                                        <th>Kategori</th>
+                                        <th>Nominal</th>
+                                        <th>Aksi</th>
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody id="incomeTable">
+
+                                    <tr>
+
+                                        <td
+                                            colspan="6"
+                                            class="empty-data"
+                                        >
+                                            Belum ada data
+                                            pemasukan.
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= PENGELUARAN ================= -->
+
+                <div
+                    class="admin-page"
+                    id="page-pengeluaran"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <h2>Data Pengeluaran</h2>
+
+                            <p>
+                                Kelola seluruh pengeluaran
+                                majelis.
+                            </p>
+                        </div>
+
+                        <button class="primary-button">
+                            + Tambah Pengeluaran
+                        </button>
+
+                    </div>
+
+
+                    <div class="content-card">
+
+                        <div class="table-wrapper">
+
+                            <table>
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Tanggal</th>
+                                        <th>Keterangan</th>
+                                        <th>Detail</th>
+                                        <th>Kategori</th>
+                                        <th>Nominal</th>
+                                        <th>Aksi</th>
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody id="expenseTable">
+
+                                    <tr>
+
+                                        <td
+                                            colspan="6"
+                                            class="empty-data"
+                                        >
+                                            Belum ada data
+                                            pengeluaran.
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= LAPORAN ================= -->
+
+                <div
+                    class="admin-page"
+                    id="page-laporan"
+                >
+
+                    <div class="page-heading">
+
+                        <div>
+                            <h2>Laporan Keuangan</h2>
+
+                            <p>
+                                Rekap seluruh transaksi
+                                majelis.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="content-card">
+
+                        <div class="report-summary">
+
+                            <div>
+                                <span>Pemasukan</span>
+                                <strong id="reportIncome">
+                                    Rp0
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>Pengeluaran</span>
+                                <strong id="reportExpense">
+                                    Rp0
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>Saldo</span>
+                                <strong id="reportBalance">
+                                    Rp0
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script type="module" src="admin/js/login.js"></script>
+    <script type="module" src="admin/js/admin.js"></script>
+
+</body>
+
+</html>

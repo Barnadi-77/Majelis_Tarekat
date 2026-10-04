@@ -5,7 +5,7 @@ export function Operational() {
             <div class="container">
 
                 <!-- Section Header -->
-                <div class="section-header operational-header ">
+                <div class="section-header operational-header fade-up">
 
                     <span class="section-tag">
                         Dukungan Operasional
@@ -29,7 +29,7 @@ export function Operational() {
                 <div class="operational-grid">
 
                     <!-- Bisyarah -->
-                    <div class="operational-card ">
+                    <div class="operational-card zoom ">
 
                         <div class="operational-icon">
                             <span>🎙️</span>
@@ -54,7 +54,7 @@ export function Operational() {
 
 
                     <!-- Konsumsi -->
-                    <div class="operational-card ">
+                    <div class="operational-card zoom ">
 
                         <div class="operational-icon">
                             <span>🍱</span>
@@ -78,7 +78,7 @@ export function Operational() {
 
 
                     <!-- Sarana dan Prasarana -->
-                    <div class="operational-card ">
+                    <div class="operational-card zoom">
 
                         <div class="operational-icon">
                             <span>📖</span>
@@ -102,7 +102,7 @@ export function Operational() {
 
 
                     <!-- Kesekretariatan -->
-                    <div class="operational-card ">
+                    <div class="operational-card zoom">
 
                         <div class="operational-icon">
                             <span>📝</span>

@@ -97,7 +97,7 @@ export function Financial() {
     return `
 
         <section
-            class="financial"
+            class="financial zoom"
             id="financial"
         >
 
@@ -127,7 +127,7 @@ export function Financial() {
 
                 <!-- ==================== SUMMARY ==================== -->
 
-                <div class="financial-summary">
+                <div class="financial-summary fade-right">
 
 
                     <!-- PEMASUKAN -->
@@ -203,7 +203,7 @@ export function Financial() {
 
                 <!-- ==================== PEMASUKAN ==================== -->
 
-                <div class="financial-section">
+                <div class="financial-section fade-left">
 
                     <div class="financial-section-header">
 
@@ -293,7 +293,7 @@ export function Financial() {
 
                 <!-- ==================== PENGELUARAN ==================== -->
 
-                <div class="financial-section">
+                <div class="financial-section fade-right">
 
                     <div class="financial-section-header">
 

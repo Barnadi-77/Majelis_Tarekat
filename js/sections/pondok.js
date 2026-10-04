@@ -9,7 +9,7 @@ export function Pondok() {
             <div class="container">
 
                 <!-- ==================== SECTION HEADER ==================== -->
-                <div class="pondok-header">
+                <div class="pondok-header zoom">
 
                     <span class="section-label">
                         Program Pembangunan Pondok
@@ -32,7 +32,7 @@ export function Pondok() {
                 <div class="pondok-content">
 
                     <!-- ==================== IMAGE ==================== -->
-                    <div class="pondok-image">
+                    <div class="pondok-image fade-left">
 
                         <img
                             src="./assets/images/pondok.jpg"
@@ -51,7 +51,7 @@ export function Pondok() {
 
 
                     <!-- ==================== INFO ==================== -->
-                    <div class="pondok-info">
+                    <div class="pondok-info fade-up">
 
                         <div class="pondok-info-header">
 
@@ -138,7 +138,7 @@ export function Pondok() {
 
 
                 <!-- ==================== NOTE ==================== -->
-                <div class="pondok-note">
+                <div class="pondok-note zoom">
 
                     <p>
                         Pembangunan pondok ini diperuntukkan sebagai sarana
@@ -151,7 +151,7 @@ export function Pondok() {
                 <!-- ==================== DETAILS ==================== -->
                 <div class="pondok-details">
 
-                    <div class="pondok-detail-item">
+                    <div class="pondok-detail-item fade-left">
 
                         <span class="pondok-detail-icon">
                             📍
@@ -172,7 +172,7 @@ export function Pondok() {
                     </div>
 
 
-                    <div class="pondok-detail-item">
+                    <div class="pondok-detail-item zoom">
 
                         <span class="pondok-detail-icon">
                             🏗️
@@ -193,7 +193,7 @@ export function Pondok() {
                     </div>
 
 
-                    <div class="pondok-detail-item">
+                    <div class="pondok-detail-item fade-right">
 
                         <span class="pondok-detail-icon">
                             🏫

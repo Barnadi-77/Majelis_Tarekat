@@ -9,7 +9,7 @@ export function Waqf() {
             <div class="container">
 
                 <!-- ==================== SECTION HEADER ==================== -->
-                <div class="waqf-header">
+                <div class="waqf-header zoom">
 
                     <span class="section-label">
                         Program Wakaf Tanah
@@ -32,7 +32,7 @@ export function Waqf() {
                 <div class="waqf-content">
 
                     <!-- ==================== LAND IMAGE ==================== -->
-                    <div class="waqf-image">
+                    <div class="waqf-image fade-left">
 
                         <img
                             src="./assets/images/waqf.jpg"
@@ -51,7 +51,7 @@ export function Waqf() {
 
 
                     <!-- ==================== WAKAF INFO ==================== -->
-                    <div class="waqf-info">
+                    <div class="waqf-info fade-up">
 
                         <div class="waqf-info-header">
 
@@ -137,7 +137,7 @@ export function Waqf() {
 
 
                 <!-- ==================== WAKAF NOTE ==================== -->
-                <div class="waqf-note">
+                <div class="waqf-note zoom">
 
                     <p>
                         Tanah wakaf ini diperuntukkan bagi kepentingan
@@ -150,7 +150,7 @@ export function Waqf() {
                 <!-- ==================== LAND DETAILS ==================== -->
                 <div class="waqf-details">
 
-                    <div class="waqf-detail-item">
+                    <div class="waqf-detail-item fade-left">
 
                         <span class="waqf-detail-icon">
                             📍
@@ -169,7 +169,7 @@ export function Waqf() {
                     </div>
 
 
-                    <div class="waqf-detail-item">
+                    <div class="waqf-detail-item zoom">
 
                         <span class="waqf-detail-icon">
                             📐
@@ -188,7 +188,7 @@ export function Waqf() {
                     </div>
 
 
-                    <div class="waqf-detail-item">
+                    <div class="waqf-detail-ite fade-right">
 
                         <span class="waqf-detail-icon">
                             📄

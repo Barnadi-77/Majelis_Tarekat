@@ -22,6 +22,7 @@ import { Counter } from "./utils/counter.js";
 import { initFAQ } from "./utils/helper.js";
 import { Clipboard } from "./utils/clipboard.js";
 
+
 const app = document.getElementById("app");
 
 app.innerHTML = `
