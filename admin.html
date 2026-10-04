@@ -50,13 +50,8 @@
                             👤
                         </span>
 
-                        <input
-                            type="text"
-                            id="username"
-                            placeholder="Masukkan username"
-                            autocomplete="username"
-                            required
-                        >
+                        <input type="text" id="username" placeholder="Masukkan username" autocomplete="username"
+                            required>
 
                     </div>
 
@@ -75,19 +70,10 @@
                             🔒
                         </span>
 
-                        <input
-                            type="password"
-                            id="password"
-                            placeholder="Masukkan password"
-                            autocomplete="current-password"
-                            required
-                        >
+                        <input type="password" id="password" placeholder="Masukkan password"
+                            autocomplete="current-password" required>
 
-                        <button
-                            type="button"
-                            class="password-toggle"
-                            id="passwordToggle"
-                        >
+                        <button type="button" class="password-toggle" id="passwordToggle">
                             👁
                         </button>
 
@@ -96,26 +82,17 @@
                 </div>
 
 
-                <p
-                    class="login-error"
-                    id="loginError"
-                ></p>
+                <p class="login-error" id="loginError"></p>
 
 
-                <button
-                    type="submit"
-                    class="login-button"
-                >
+                <button type="submit" class="login-button">
                     <span>Masuk ke Dashboard</span>
                 </button>
 
             </form>
 
 
-            <a
-                href="index.html"
-                class="back-home"
-            >
+            <a href="index.html" class="back-home">
                 ← Kembali ke Website
             </a>
 
@@ -129,11 +106,7 @@
          ADMIN DASHBOARD
     ================================================== -->
 
-    <section
-        class="admin-layout"
-        id="adminDashboard"
-        hidden
-    >
+    <section class="admin-layout" id="adminDashboard" hidden>
 
         <!-- ================= SIDEBAR ================= -->
 
@@ -155,37 +128,25 @@
 
             <nav class="sidebar-nav">
 
-                <button
-                    class="nav-item active"
-                    data-page="dashboard"
-                >
+                <button class="nav-item active" data-page="dashboard">
                     <span>▣</span>
                     <span>Dashboard</span>
                 </button>
 
 
-                <button
-                    class="nav-item"
-                    data-page="pemasukan"
-                >
+                <button class="nav-item" data-page="pemasukan">
                     <span>↗</span>
                     <span>Pemasukan</span>
                 </button>
 
 
-                <button
-                    class="nav-item"
-                    data-page="pengeluaran"
-                >
+                <button class="nav-item" data-page="pengeluaran">
                     <span>↘</span>
                     <span>Pengeluaran</span>
                 </button>
 
 
-                <button
-                    class="nav-item"
-                    data-page="laporan"
-                >
+                <button class="nav-item" data-page="laporan">
                     <span>▤</span>
                     <span>Laporan</span>
                 </button>
@@ -195,19 +156,13 @@
 
             <div class="sidebar-bottom">
 
-                <a
-                    href="index.html"
-                    class="sidebar-home"
-                >
+                <a href="index.html" class="sidebar-home">
                     <span>⌂</span>
                     Website Utama
                 </a>
 
 
-                <button
-                    class="logout-button"
-                    id="logoutButton"
-                >
+                <button class="logout-button" id="logoutButton">
                     <span>↪</span>
                     Keluar
                 </button>
@@ -226,10 +181,7 @@
 
             <header class="admin-topbar">
 
-                <button
-                    class="sidebar-toggle"
-                    id="sidebarToggle"
-                >
+                <button class="sidebar-toggle" id="sidebarToggle">
                     ☰
                 </button>
 
@@ -274,10 +226,7 @@
 
                 <!-- ================= DASHBOARD ================= -->
 
-                <div
-                    class="admin-page active"
-                    id="page-dashboard"
-                >
+                <div class="admin-page active" id="page-dashboard">
 
                     <div class="page-heading">
 
@@ -385,10 +334,7 @@
                                 </p>
                             </div>
 
-                            <button
-                                class="view-all-button"
-                                data-page="laporan"
-                            >
+                            <button class="view-all-button" data-page="laporan">
                                 Lihat Semua
                             </button>
 
@@ -400,32 +346,24 @@
                             <table>
 
                                 <thead>
-
                                     <tr>
                                         <th>Tanggal</th>
+                                        <th>Nama</th>
                                         <th>Keterangan</th>
                                         <th>Detail</th>
                                         <th>Kategori</th>
-                                        <th>Jenis</th>
                                         <th>Nominal</th>
+                                        <th>Bukti</th>
+                                        <th>Aksi</th>
                                     </tr>
-
                                 </thead>
 
-
                                 <tbody id="recentTransactions">
-
                                     <tr>
-
-                                        <td
-                                            colspan="6"
-                                            class="empty-data"
-                                        >
+                                        <td colspan="8" class="empty-data">
                                             Belum ada transaksi.
                                         </td>
-
                                     </tr>
-
                                 </tbody>
 
                             </table>
@@ -440,10 +378,7 @@
 
                 <!-- ================= PEMASUKAN ================= -->
 
-                <div
-                    class="admin-page"
-                    id="page-pemasukan"
-                >
+                <div class="admin-page" id="page-pemasukan">
 
                     <div class="page-heading">
 
@@ -470,33 +405,24 @@
                             <table>
 
                                 <thead>
-
                                     <tr>
                                         <th>Tanggal</th>
+                                        <th>Nama</th>
                                         <th>Keterangan</th>
                                         <th>Detail</th>
                                         <th>Kategori</th>
                                         <th>Nominal</th>
+                                        <th>Bukti</th>
                                         <th>Aksi</th>
                                     </tr>
-
                                 </thead>
 
-
                                 <tbody id="incomeTable">
-
                                     <tr>
-
-                                        <td
-                                            colspan="6"
-                                            class="empty-data"
-                                        >
-                                            Belum ada data
-                                            pemasukan.
+                                        <td colspan="8" class="empty-data">
+                                            Belum ada data pemasukan.
                                         </td>
-
                                     </tr>
-
                                 </tbody>
 
                             </table>
@@ -511,10 +437,7 @@
 
                 <!-- ================= PENGELUARAN ================= -->
 
-                <div
-                    class="admin-page"
-                    id="page-pengeluaran"
-                >
+                <div class="admin-page" id="page-pengeluaran">
 
                     <div class="page-heading">
 
@@ -541,33 +464,24 @@
                             <table>
 
                                 <thead>
-
                                     <tr>
                                         <th>Tanggal</th>
+                                        <th>Nama</th>
                                         <th>Keterangan</th>
                                         <th>Detail</th>
                                         <th>Kategori</th>
                                         <th>Nominal</th>
+                                        <th>Bukti</th>
                                         <th>Aksi</th>
                                     </tr>
-
                                 </thead>
 
-
                                 <tbody id="expenseTable">
-
                                     <tr>
-
-                                        <td
-                                            colspan="6"
-                                            class="empty-data"
-                                        >
-                                            Belum ada data
-                                            pengeluaran.
+                                        <td colspan="8" class="empty-data">
+                                            Belum ada data pengeluaran.
                                         </td>
-
                                     </tr>
-
                                 </tbody>
 
                             </table>
@@ -582,10 +496,7 @@
 
                 <!-- ================= LAPORAN ================= -->
 
-                <div
-                    class="admin-page"
-                    id="page-laporan"
-                >
+                <div class="admin-page" id="page-laporan">
 
                     <div class="page-heading">
 
@@ -639,11 +550,253 @@
     </section>
 
 
+    <!-- ==================================================
+     MODAL TRANSAKSI
+================================================== -->
+
+<div class="transaction-modal" id="transactionModal" hidden>
+
+    <div
+        class="modal-overlay"
+        id="modalOverlay"
+    ></div>
+
+    <div class="modal-card">
+
+        <div class="modal-header">
+            <div>
+                <h3 id="modalTitle">
+                    Tambah Pemasukan
+                </h3>
+
+                <p>
+                    Lengkapi informasi transaksi.
+                </p>
+            </div>
+
+            <button
+                type="button"
+                class="modal-close"
+                id="modalClose"
+            >
+                ×
+            </button>
+        </div>
+
+        <form id="transactionForm">
+
+            <input
+                type="hidden"
+                id="transactionId"
+            >
+
+            <input
+                type="hidden"
+                id="transactionType"
+            >
+
+            <!-- TANGGAL -->
+            <div class="form-group">
+                <label for="transactionDate">
+                    Tanggal
+                </label>
+
+                <input
+                    type="date"
+                    id="transactionDate"
+                    required
+                >
+            </div>
+
+            <!-- NAMA -->
+            <div class="form-group">
+                <label for="transactionName">
+                    Nama
+                </label>
+
+                <input
+                    type="text"
+                    id="transactionName"
+                    placeholder="Masukkan nama"
+                    required
+                >
+            </div>
+
+            <!-- KETERANGAN -->
+            <div class="form-group">
+                <label for="transactionDescription">
+                    Keterangan
+                </label>
+
+                <input
+                    type="text"
+                    id="transactionDescription"
+                    placeholder="Contoh: Donasi jamaah"
+                    required
+                >
+            </div>
+
+            <!-- DETAIL -->
+            <div class="form-group">
+                <label for="transactionDetail">
+                    Detail
+                </label>
+
+                <textarea
+                    id="transactionDetail"
+                    rows="3"
+                    placeholder="Masukkan detail transaksi"
+                ></textarea>
+            </div>
+
+            <!-- KATEGORI -->
+            <div class="form-group">
+                <label for="transactionCategory">
+                    Kategori
+                </label>
+
+                <select
+                    id="transactionCategory"
+                    required
+                >
+                    <option value="">
+                        Pilih kategori
+                    </option>
+
+                    <option value="Donasi">
+                        Donasi
+                    </option>
+
+                    <option value="Wakaf">
+                        Wakaf
+                    </option>
+
+                    <option value="Infaq">
+                        Infaq
+                    </option>
+
+                    <option value="Operasional">
+                        Operasional
+                    </option>
+
+                    <option value="Kegiatan">
+                        Kegiatan
+                    </option>
+
+                    <option value="Pembangunan">
+                        Pembangunan
+                    </option>
+
+                    <option value="Lainnya">
+                        Lainnya
+                    </option>
+                </select>
+            </div>
+
+            <!-- NOMINAL -->
+            <div class="form-group">
+                <label for="transactionAmount">
+                    Nominal
+                </label>
+
+                <input
+                    type="number"
+                    id="transactionAmount"
+                    placeholder="Contoh: 500000"
+                    min="0"
+                    required
+                >
+            </div>
+
+            <!-- BUKTI -->
+            <div class="form-group">
+
+                <label for="transactionProof">
+                    Bukti Transaksi
+                </label>
+
+                <div class="upload-box">
+
+                    <input
+                        type="file"
+                        id="transactionProof"
+                        accept="image/png,image/jpeg,image/webp"
+                    >
+
+                    <div class="upload-content">
+
+                        <span class="upload-icon">
+                            ↑
+                        </span>
+
+                        <strong>
+                            Upload Bukti
+                        </strong>
+
+                        <small>
+                            PNG, JPG, JPEG atau WEBP
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <!-- PREVIEW -->
+                <div
+                    class="proof-preview"
+                    id="proofPreview"
+                    hidden
+                >
+
+                    <img
+                        id="proofPreviewImage"
+                        src=""
+                        alt="Preview bukti transaksi"
+                    >
+
+                    <button
+                        type="button"
+                        id="removeProof"
+                    >
+                        Hapus gambar
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelTransaction"
+                >
+                    Batal
+                </button>
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    Simpan Transaksi
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
     <!-- JAVASCRIPT -->
 
     <script type="module" src="admin/js/login.js"></script>
-    <script type="module" src="admin/js/admin.js"></script>
 
+    <script type="module" src="admin/js/admin.js"></script>
 </body>
 
 </html>
