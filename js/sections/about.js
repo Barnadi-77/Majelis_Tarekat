@@ -55,7 +55,7 @@ export function About() {
 
                     </div>
 
-                    <a href="#" class="btn-primary">
+                    <a href="./html/tentang.html" class="btn-primary">
                         Pelajari Lebih Lanjut
                     </a>
 
