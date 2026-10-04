@@ -48,9 +48,7 @@ export function Programs() {
 
                             </p>
 
-                            <a href="#">
-                                Selengkapnya →
-                            </a>
+                            <a href="../html/detail-program.html?program=${program.slug}"> Selengkapnya <span>→</span> </a>
 
                         </div>
 
