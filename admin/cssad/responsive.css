@@ -1,3 +1,4 @@
+```css
 /* ==================================================
    TABLET
 ================================================== */
@@ -5,8 +6,7 @@
 @media (max-width: 1100px) {
 
     .stats-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -18,31 +18,40 @@
 
 @media (max-width: 800px) {
 
+    /* ================= SIDEBAR ================= */
+
     .admin-sidebar {
         transform: translateX(-100%);
-
-        transition: 0.3s;
+        transition: transform 0.3s ease;
+        z-index: 1000;
     }
 
-
-    .admin-sidebar.show {
+    /*
+        PENTING:
+        JS menggunakan class .open
+    */
+    .admin-sidebar.open {
         transform: translateX(0);
     }
 
 
+    /* ================= MAIN ================= */
+
     .admin-main {
         width: 100%;
-
         margin-left: 0;
     }
 
 
+    /* ================= TOPBAR ================= */
+
     .admin-topbar {
         height: 75px;
-
         padding: 0 20px;
     }
 
+
+    /* ================= HAMBURGER ================= */
 
     .sidebar-toggle {
         width: 40px;
@@ -57,37 +66,76 @@
         border-radius: 9px;
 
         background: #edf5ef;
-
         color: #1f6b45;
 
         font-size: 18px;
+
+        cursor: pointer;
+
+        transition: 0.3s;
     }
 
+    .sidebar-toggle:hover {
+        background: #dfeee5;
+    }
+
+    .sidebar-toggle:active {
+        transform: scale(0.95);
+    }
+
+
+    /* ================= PROFILE ================= */
 
     .profile-info {
         display: none;
     }
 
 
+    /* ================= CONTENT ================= */
+
     .admin-content {
         padding: 25px 20px;
     }
 
 
+    /* ================= PAGE HEADING ================= */
+
     .page-heading {
         align-items: flex-start;
-
         flex-direction: column;
     }
 
+
+    /* ================= BUTTON ================= */
 
     .primary-button {
         width: 100%;
     }
 
 
+    /* ================= REPORT ================= */
+
     .report-summary {
         grid-template-columns: 1fr;
+    }
+
+
+    /* ================= SIDEBAR OVERLAY ================= */
+
+    .admin-sidebar.open::after {
+        content: "";
+
+        position: fixed;
+
+        top: 0;
+        left: 250px;
+
+        width: calc(100vw - 250px);
+        height: 100vh;
+
+        background: rgba(0, 0, 0, 0.25);
+
+        z-index: -1;
     }
 
 }
@@ -99,61 +147,93 @@
 
 @media (max-width: 550px) {
 
+    /* ================= LOGIN ================= */
+
     .login-page {
         padding: 18px;
     }
 
-
     .login-card {
         padding: 32px 23px;
-
         border-radius: 18px;
     }
-
 
     .login-logo h1 {
         font-size: 22px;
     }
 
 
+    /* ================= STATS ================= */
+
     .stats-grid {
         grid-template-columns: 1fr;
-
         gap: 12px;
     }
-
 
     .stat-card {
         padding: 18px;
     }
 
 
+    /* ================= CONTENT ================= */
+
     .admin-content {
         padding: 20px 15px;
     }
 
 
+    /* ================= TOPBAR ================= */
+
     .topbar-title h1 {
         font-size: 18px;
     }
-
 
     .topbar-title p {
         display: none;
     }
 
 
+    /* ================= PAGE HEADING ================= */
+
     .page-heading h2 {
         font-size: 19px;
     }
 
 
+    /* ================= CARD HEADER ================= */
+
     .card-header {
         align-items: flex-start;
-
         gap: 12px;
-
         flex-direction: column;
     }
 
+
+    /* ================= MODAL ================= */
+
+    .transaction-modal {
+        padding: 15px;
+    }
+
+    .modal-card {
+        max-height: 95vh;
+        border-radius: 15px;
+    }
+
+    #transactionForm {
+        padding: 20px;
+    }
+
+
+    /* ================= MODAL BUTTON ================= */
+
+    .modal-actions {
+        flex-direction: column-reverse;
+    }
+
+    .modal-actions button {
+        width: 100%;
+    }
+
 }
+```
