@@ -1,0 +1,88 @@
+/* ========================================
+   ABOUT PAGE RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .about-hero h1 {
+        font-size: 42px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .vm-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .program-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar-content {
+        min-height: 65px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .back-home {
+        font-size: 14px;
+    }
+
+    .about-hero {
+        padding: 80px 20px;
+    }
+
+    .about-hero h1 {
+        font-size: 34px;
+    }
+
+    .about-hero p {
+        font-size: 15px;
+    }
+
+    .about-history,
+    .vision-mission,
+    .values,
+    .about-program,
+    .about-cta {
+        padding: 70px 0;
+    }
+
+    .about-text h2,
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .vm-card {
+        padding: 28px 22px;
+    }
+
+    .values-grid,
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value-card,
+    .program-card {
+        padding: 28px 22px;
+    }
+
+    .about-cta h2 {
+        font-size: 32px;
+    }
+
+}
